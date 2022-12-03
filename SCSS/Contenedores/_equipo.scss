@@ -1,0 +1,135 @@
+/* seccion de Equipo */
+
+/*estilo del header */
+
+@include table{
+
+.staff{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.6rem; 
+    background-color: $color-secundario;
+    color: $color-link;
+    span{
+        display: block;
+    }
+    h1{
+        text-align: center;
+        font-family: $textoPrincipal;
+        text-shadow: 1px 1px 3px whitesmoke;
+    }
+    img{
+        width: 20%;
+        border: black solid 2px;
+        border-radius: 80%;
+    }                
+}
+
+/*estilo del main */
+
+.equipo-uno, .equipo-dos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        padding: 0.5rem;
+        text-decoration: none;
+        list-style: none;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #241811;
+        text-shadow: 4px 1px 5px #5c483a;
+    }
+    img{
+        width: 60%;
+        border: 2px solid black;
+        border-radius: 1rem;
+    }
+   }
+
+   .team{
+        p{
+        padding: 1rem;
+        text-align: center;
+        font-size: 20px
+        }
+    }
+
+
+
+
+/* estilo del footer */
+
+.inicio{
+    a{
+    @include footer (flex)
+    }
+    }
+
+}
+
+ //media querie desktop
+
+@include desktop{
+
+    /* Seccion Equipo */
+
+    /* estilo del header */
+
+.staff{
+    img{
+        width: 10%;
+        animation: rotateIn;
+        animation-duration: 1s;
+    }
+    h1{
+        animation: fadeInRight;
+        animation-duration: 1s;
+    }
+
+    }
+
+    /* estilo del main */
+
+    .team{
+        padding: 1.5rem;
+
+        display: grid; 
+        display: flex;              
+        grid-template-columns: auto;
+        grid-template-rows: auto;        
+
+        grid-area:
+        "equipo-uno equipo-dos";
+
+        justify-content: center;
+
+    .equipo-uno{
+        grid-area: equipo-uno;
+    }
+
+    .equipo-dos{
+        grid-area: equipo-dos;
+        width: 105%;
+    }
+
+    img{
+        width: 70%;
+        &:hover{
+            filter: drop-shadow(2px 2px 5px #F81C1C);
+        }
+    }    
+    }
+
+    /* estilo del footer */
+
+    .inicio{
+        a{
+        @include footer (flex)    
+        }      
+    }
+}
+
+

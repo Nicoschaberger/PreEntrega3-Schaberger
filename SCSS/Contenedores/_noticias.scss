@@ -1,0 +1,102 @@
+// mq
+
+@include table{
+    /* seccion noticias */
+
+    /* estilo del header */
+
+    .noticia{
+        background-color: #b39e58;
+        padding: 10px;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        h1{
+            text-align: center;
+            font-family: $textoPrincipal;
+            text-shadow: 1px 1px 3px whitesmoke;
+        }
+        img{
+            width: 15%;
+            border: black solid 2px;
+            border-radius: 80%;
+        }}
+    
+        /*estilo del main */
+
+        .nota{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 60%;
+                border: 2px solid black;
+                margin: 16px;        
+            }
+            div{
+                p{
+                    text-align: center;
+                    font-size: 1.2rem;
+                    padding: 1rem;                
+                }
+            }            
+        }    
+}
+
+@include desktop{
+    /* estilo del header */
+    
+    .noticia{
+        img{
+            width: 10%;
+            animation: rotateIn;
+            animation-duration: 1s;    
+        }
+        h1{
+            animation: fadeInRight;
+            animation-duration: 1s;
+        }        
+    }
+
+        /* estilo del main */   
+        .nota{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            display: grid;            
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+    
+            grid-template-areas: 
+            "img p";
+            
+            justify-content: center;
+            img{
+                grid-area: img;
+            }
+            div{
+                p{
+                    grid-area: p;
+                    text-align: center;
+                    font-size: 1.2rem;
+                                     
+                }
+            }
+            img{
+                width: 80%;
+                border: 2px solid black;
+                margin: 20px;                
+            }
+                  
+        }
+
+    /* estilo del footer */
+
+    .inicio{
+        a{
+        @include footer (flex)    
+        }
+    }    
+}        

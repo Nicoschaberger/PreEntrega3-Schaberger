@@ -1,0 +1,170 @@
+/* estilos de index para celulares */
+
+/* estilos del header */
+
+.navbar{
+    display: none;
+}
+
+/* estilos del main */ 
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem; 
+    h1{
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: bolder;    
+    }
+    img{
+        width: 80%;
+        border: solid 2px black;
+        border-radius: 90%;
+        margin: 1.3rem;
+    }
+    div{
+        p{
+            @include condicion (center)        
+        }
+    }
+}
+
+/* estilos del footer */
+
+.final{
+    background-color: $color-secundario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    h2{
+        @include condicionales (0.4rem)
+    }
+    div{
+        p{
+            @include condicionales (0.4rem)
+        }
+    }
+
+.contac{
+    a{
+    list-style: none;
+    text-decoration: none;
+    color: $color-link;
+    font-weight: bold;
+    }
+    }   
+}
+
+@include table{
+    /* contenido del header */
+
+.navbar{
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-secundario;
+    color: $color-link;
+    img{
+        width: 15%;
+        border: 3px solid black;
+        border-radius: 100%;
+        margin: 10px;        
+    }
+    .collapse{
+        font-weight: bold;    
+    }    
+}
+
+/* estilo del main */
+
+.contenedor{
+    img{
+    width: 40%;
+}
+}
+
+/*estilo footer */
+
+.final .contac{
+    display: none;}
+}
+
+@include desktop{
+    /* estilo del header */
+    
+    .navbar{
+        background-color: $color-secundario;
+        .container-fluid{
+            img{
+                width: 10%;
+                border: 2px solid black;
+                border-radius: 90%;
+                margin-left: 6rem;
+            } 
+        }
+        .collapse{
+            font-weight: bold;
+            display: flex;
+            justify-content: end;
+        }
+        .navbar-nav{
+            margin-right: 5rem;
+        }
+        .navbar-nav{
+            .nav-item{
+                border: 1px solid black;
+                border-radius: 1rem;
+                box-shadow: 2px 3px 4px black;
+                margin: 0.5rem;
+                &:hover{
+                    transform: scale(0.8);
+                }
+            }             
+        }      
+    
+    }
+
+    /* contenido del main */
+
+    .contenedor{
+        padding: 2.1rem;
+        img{
+            width: 70%;
+            &:hover{
+                filter: drop-shadow(2px 2px 5px #F81C1C);
+            }                
+        }    
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        grid-template-areas: 
+        "h1 img"
+        "p img";
+
+        justify-content: center;
+        h1{
+            grid-area: h1;
+        }
+        img{
+            grid-area: img;
+        }
+        p{
+            grid-area: p;
+        }    
+    }
+    
+}
+
+
+
+
+
+

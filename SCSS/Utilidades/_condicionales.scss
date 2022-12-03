@@ -1,0 +1,75 @@
+// condicionales
+
+@mixin condicion ($colores-dos){
+    background-color: $colores-dos;
+
+    // condicion
+    @if $colores-dos == #b39e58{
+        border: 1px solid black;
+        border-radius: 1rem;
+        box-shadow: 2px 3px 4px black;
+        margin: 0.5rem;
+    } @else {
+        border: 1px solid red;
+        border-radius: 1rem;
+        box-shadow: 2px 3px 4px red;
+        margin: 0.5rem;
+    }
+}
+
+@mixin condicion ($texto-parrafo){
+    text-align: $texto-parrafo;
+
+    // condicion
+    @if $texto-parrafo == center{
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: bolder;         
+    } @else{
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+}
+
+@mixin condicionales ($texto-p){
+    padding: $texto-p;
+
+    //condicion
+    @if $texto-p == 0.4rem{
+        color: #241811;
+    }
+}
+
+@mixin equipo ($staf){
+    font-size: $staf;
+
+    //condicion
+    @if $staf == 1.5rem{
+        padding: 0.5rem;
+        text-decoration: none;
+        list-style: none;
+        text-align: center;
+        color: #241811;
+        text-shadow: 4px 1px 5px #5c483a;
+
+    }
+}
+
+@mixin footer ($footer-600){
+    display: $footer-600;
+
+    //condicion
+    @if $footer-600 == flex{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;    
+        color: #241811;
+        text-decoration: none;
+        list-style: none;
+        font-weight: bolder;
+        font-size: 1.2rem;  
+        text-shadow: 1px 1px 5px black;
+    }
+}
