@@ -62,10 +62,19 @@
 
 /* estilo del footer */
 
-.inicio{
-    a{
-    @include footer (flex)
+.final{
+    background-color: $color-secundario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    h2{
+        @include condicionales (0.4rem)
     }
+    div{
+        p{
+            @include condicionales (0.4rem)
+        }
     }
 
 }
@@ -125,11 +134,20 @@
 
     /* estilo del footer */
 
-    .inicio{
-        a{
-        @include footer (flex)    
-        }      
-    }
+    .final{
+        background-color: $color-secundario;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        h2{
+            @include condicionales (0.4rem)
+        }
+        div{
+            p{
+                @include condicionales (0.4rem)
+            }
+        }}
 }
-
+}
 

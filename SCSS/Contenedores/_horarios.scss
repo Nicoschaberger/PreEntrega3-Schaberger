@@ -45,18 +45,17 @@
 
 /* estilo del footer */
 
-.inicio{
-    background-color: #b39e58;
-    text-align: center;
-    padding: 2rem;
-    a{
-        align-items: center;
+.final{
+    .end{
+        a{
         text-decoration: none;
-        list-style: none;
+        font-weight: bold;
         color: black;
-        font-weight: bold;    
+        list-style: none;
+        }
     }
 }
+
 
 // mq tablet
 
@@ -103,7 +102,15 @@
             font-weight: bold;
         }         
     } 
-    
+}
+
+/* estilo footer */
+.final{
+    .end{
+        a{
+            display: none;
+        }
+    }
 }
 }
 
@@ -160,10 +167,5 @@
         }
     
     }
-/* seccion del footer */
-.inicio{
-    a{
-    @include footer (flex)    
-    }      
-}
+       
 }
